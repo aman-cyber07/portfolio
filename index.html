@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+$html = @'
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -24,6 +25,7 @@
       <a href="#projects">Projects</a>
       <a href="#labs">Labs</a>
       <a href="#certifications">Certs</a>
+      <a href="#internships">Internships</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -62,7 +64,7 @@
 <section class="stats-bar">
   <div class="container stats-grid">
     <div class="stat" data-reveal><div class="stat-number" data-count="13">0</div><div class="stat-label">Security Tools</div></div>
-    <div class="stat" data-reveal><div class="stat-number" data-count="5">0</div><div class="stat-label">Certifications</div></div>
+    <div class="stat" data-reveal><div class="stat-number" data-count="8">0</div><div class="stat-label">Certifications</div></div>
     <div class="stat" data-reveal><div class="stat-number" data-count="5">0</div><div class="stat-label">Projects Built</div></div>
     <div class="stat" data-reveal><div class="stat-number" data-count="12">0</div><div class="stat-label">SOC Labs Done</div></div>
   </div>
@@ -117,31 +119,36 @@
     <h2 class="section-title" data-reveal>PROJECTS</h2>
     <div class="projects-grid">
       <article class="project-card" data-reveal>
-        <div class="project-thumb"><span class="thumb-badge">01</span><img src="assets/projects/mcpguard.png" alt="MCPGuard" /></div><h3>MCPGuard</h3>
+        <div class="project-thumb"><span class="thumb-badge">01</span><img src="assets/projects/mcpguard.png" alt="MCPGuard" /></div>
+        <h3>MCPGuard</h3>
         <p>A runtime security analyzer that detects malicious tool chains in AI agents using the Model Context Protocol (MCP). It builds a live capability graph of agent behavior and blocks data-exfiltration paths.</p>
         <div class="tags"><span class="tag">AI Security</span><span class="tag">MCP</span><span class="tag">Runtime Analysis</span></div>
         <a href="https://github.com/aman-cyber07/mcpguard" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
       </article>
       <article class="project-card" data-reveal>
-        <div class="project-thumb"><span class="thumb-badge">02</span><img src="assets/projects/ai-honeyperson.png" alt="AI HoneyPerson" /></div><h3>AI HoneyPerson</h3>
+        <div class="project-thumb"><span class="thumb-badge">02</span><img src="assets/projects/ai-honeyperson.png" alt="AI HoneyPerson" /></div>
+        <h3>AI HoneyPerson</h3>
         <p>A defensive deception system that creates LLM-powered fake employees to engage and trap attackers. Detects intent, maps behavior to MITRE ATT&amp;CK, and extracts IOCs.</p>
         <div class="tags"><span class="tag">Deception</span><span class="tag">LLM</span><span class="tag">MITRE ATT&amp;CK</span></div>
         <a href="https://github.com/aman-cyber07/ai-honeyperson" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
       </article>
       <article class="project-card" data-reveal>
-        <div class="project-thumb"><span class="thumb-badge">03</span><img src="assets/projects/permission-forecast.png" alt="PermissionForecast" /></div><h3>PermissionForecast</h3>
+        <div class="project-thumb"><span class="thumb-badge">03</span><img src="assets/projects/permission-forecast.png" alt="PermissionForecast" /></div>
+        <h3>PermissionForecast</h3>
         <p>An AI-powered IAM tool that predicts privilege escalation before it happens. Detects dangerous permission chains, assigns risk scores, and recommends minimal fixes.</p>
         <div class="tags"><span class="tag">IAM</span><span class="tag">Cloud Security</span><span class="tag">Risk Scoring</span></div>
         <a href="https://github.com/aman-cyber07/Permission-forecast" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
       </article>
       <article class="project-card" data-reveal>
-        <div class="project-thumb"><span class="thumb-badge">04</span><img src="assets/projects/intent-firewall.png" alt="IntentFirewall" /></div><h3>IntentFirewall</h3>
+        <div class="project-thumb"><span class="thumb-badge">04</span><img src="assets/projects/intent-firewall.png" alt="IntentFirewall" /></div>
+        <h3>IntentFirewall</h3>
         <p>An intent-based access control system for AI agents. Compares declared objective against observed runtime behavior and computes a divergence score. Above 70% divergence, it pauses the agent.</p>
         <div class="tags"><span class="tag">AI Agents</span><span class="tag">Access Control</span><span class="tag">Behavioral Analytics</span></div>
         <a href="https://github.com/aman-cyber07/intent-firewall" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
       </article>
       <article class="project-card" data-reveal>
-        <div class="project-thumb"><span class="thumb-badge">05</span><img src="assets/projects/datagravity.png" alt="DataGravity" /></div><h3>DataGravity</h3>
+        <div class="project-thumb"><span class="thumb-badge">05</span><img src="assets/projects/datagravity.png" alt="DataGravity" /></div>
+        <h3>DataGravity</h3>
         <p>A predictive data leak prevention (DLP) tool. Maps users, apps, data, and AI tools into a graph, then predicts exfiltration paths with a probability score.</p>
         <div class="tags"><span class="tag">DLP</span><span class="tag">Graph Analysis</span><span class="tag">PII Detection</span></div>
         <a href="https://github.com/aman-cyber07/DataGravity" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
@@ -176,65 +183,69 @@
     <h2 class="section-title" data-reveal>CERTIFICATIONS</h2>
     <div class="certs-list">
       <div class="cert-item" data-reveal>
-        <div class="cert-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
-        <div class="cert-info"><div class="cert-name">CCNA</div><div class="cert-meta">Seven Mentor</div></div>
-        <a href="assets/certs/ccna.jpg" download="Aman_Gaikwad_CCNA.jpg" class="cert-download" aria-label="Download CCNA">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        </a>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">SOC Analyst Program</div><div class="cert-meta">Seven Mentor</div></div>
+        <a href="assets/certs/soc.jpg" download="Aman_Gaikwad_SOC.jpg" class="cert-download" aria-label="Download SOC"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
       </div>
       <div class="cert-item" data-reveal>
-        <div class="cert-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
-        <div class="cert-info"><div class="cert-name">Red Hat Linux</div><div class="cert-meta">Seven Mentor</div></div>
-        <a href="assets/certs/redhat-linux.jpg" download="Aman_Gaikwad_RedHat_Linux.jpg" class="cert-download" aria-label="Download Red Hat Linux">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        </a>
-      </div>
-      <div class="cert-item" data-reveal>
-        <div class="cert-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
         <div class="cert-info"><div class="cert-name">CEH v13</div><div class="cert-meta">Seven Mentor</div></div>
-        <a href="assets/certs/ceh-v13.jpg" download="Aman_Gaikwad_CEHv13.jpg" class="cert-download" aria-label="Download CEH v13">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        </a>
+        <a href="assets/certs/ceh-v13.jpg" download="Aman_Gaikwad_CEHv13.jpg" class="cert-download" aria-label="Download CEH v13"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
       </div>
       <div class="cert-item" data-reveal>
-        <div class="cert-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
         <div class="cert-info"><div class="cert-name">WAPT</div><div class="cert-meta">Seven Mentor</div></div>
-        <a href="assets/certs/wapt.jpg" download="Aman_Gaikwad_WAPT.jpg" class="cert-download" aria-label="Download WAPT">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        </a>
+        <a href="assets/certs/wapt.jpg" download="Aman_Gaikwad_WAPT.jpg" class="cert-download" aria-label="Download WAPT"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
       </div>
       <div class="cert-item" data-reveal>
-        <div class="cert-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
-        <div class="cert-info"><div class="cert-name">SOC</div><div class="cert-meta">Seven Mentor</div></div>
-        <a href="assets/certs/soc.jpg" download="Aman_Gaikwad_SOC.jpg" class="cert-download" aria-label="Download SOC">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        </a>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">CCNA</div><div class="cert-meta">Seven Mentor</div></div>
+        <a href="assets/certs/ccna.jpg" download="Aman_Gaikwad_CCNA.jpg" class="cert-download" aria-label="Download CCNA"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
       </div>
-    </div>
-  </section>
-
-<section class="section section-alt" id="education">
-  <div class="container">
-    <h2 class="section-title" data-reveal>EDUCATION</h2>
-    <div class="certs-list">
-      <div class="cert-item" data-reveal><div class="cert-name">BE in Computer Engineering</div><div class="cert-meta">SPPU · 2023 – 2027</div></div>
-      <div class="cert-item" data-reveal><div class="cert-name">Cybersecurity Analyst Program</div><div class="cert-meta">Seven Mentor</div></div>
-      <div class="cert-item" data-reveal><div class="cert-name">10th &amp; 12th</div><div class="cert-meta">Kendriya Vidyalaya Sangathan · 2021 / 2023</div></div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">Red Hat Linux</div><div class="cert-meta">Seven Mentor</div></div>
+        <a href="assets/certs/redhat-linux.jpg" download="Aman_Gaikwad_RedHat_Linux.jpg" class="cert-download" aria-label="Download Red Hat Linux"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">Mobile Forensics &amp; Phone Lock Bypass</div><div class="cert-meta">Cyber Octopus Pvt. Ltd. · 2026</div></div>
+        <a href="assets/certs/mobile-forensics.jpg" download="Aman_Gaikwad_Mobile_Forensics.jpg" class="cert-download" aria-label="Download Mobile Forensics"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">Drone Forensics</div><div class="cert-meta">CyberSisco · 2026</div></div>
+        <a href="assets/certs/drone-forensics.jpg" download="Aman_Gaikwad_Drone_Forensics.jpg" class="cert-download" aria-label="Download Drone Forensics"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="contact">
+<section class="section section-alt" id="internships">
+  <div class="container">
+    <h2 class="section-title" data-reveal>INTERNSHIPS</h2>
+    <div class="certs-list">
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M10 7V5h4v2"/></svg></div>
+        <div class="cert-info"><div class="cert-name">Cyber Security Intern</div><div class="cert-meta">UpToSkill · 3 Months · 2026</div></div>
+        <a href="assets/certs/uptoskill-internship.jpg" download="Aman_Gaikwad_UpToSkill_Internship.jpg" class="cert-download" aria-label="Download Internship Certificate"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="container">
+    <h2 class="section-title" data-reveal>EDUCATION</h2>
+    <div class="certs-list">
+      <div class="cert-item" data-reveal><div class="cert-info"><div class="cert-name">BE in Computer Engineering</div><div class="cert-meta">SPPU · 2023 – 2027</div></div></div>
+      <div class="cert-item" data-reveal><div class="cert-info"><div class="cert-name">12th (Science — PCM)</div><div class="cert-meta">Kendriya Vidyalaya Sangathan · 2023</div></div></div>
+      <div class="cert-item" data-reveal><div class="cert-info"><div class="cert-name">10th</div><div class="cert-meta">Kendriya Vidyalaya Sangathan · 2021</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="contact">
   <div class="container">
     <h2 class="section-title" data-reveal>LET'S CONNECT</h2>
     <p class="contact-sub" data-reveal>Open to opportunities in SOC / Blue Team roles.</p>
@@ -271,8 +282,7 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+'@
 
-
-
-
-
+Set-Content -Path "$PWD\index.html" -Value $html -Encoding UTF8
+Write-Host "[OK] index.html written" -ForegroundColor Green
