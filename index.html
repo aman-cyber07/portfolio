@@ -1,4 +1,3 @@
-$html = @'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -282,7 +281,3 @@ $html = @'
 <script src="js/main.js"></script>
 </body>
 </html>
-'@
-
-Set-Content -Path "$PWD\index.html" -Value $html -Encoding UTF8
-Write-Host "[OK] index.html written" -ForegroundColor Green
