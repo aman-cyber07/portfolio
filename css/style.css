@@ -16,6 +16,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.65; font-size: 15.5px; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
 a { color: inherit; text-decoration: none; transition: color var(--transition); }
+
 .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); z-index: 9999; transition: width 80ms linear; }
 .cursor-glow { position: fixed; width: 420px; height: 420px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(37,99,235,0.10), rgba(37,99,235,0) 65%); transform: translate(-50%, -50%); z-index: 1; transition: opacity 400ms ease; opacity: 0; }
 @media (hover: hover) and (pointer: fine) { .cursor-glow { opacity: 1; } }
@@ -224,7 +225,3 @@ a { color: inherit; text-decoration: none; transition: color var(--transition); 
   .lab-body p { font-size: 13px; }
   .lab-item { gap: 14px; }
 }
-'@
-
-Set-Content -Path "$PWD\css\style.css" -Value $css -Encoding UTF8
-Write-Host "[OK] css/style.css written" -ForegroundColor Green
