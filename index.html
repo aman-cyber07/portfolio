@@ -2,174 +2,282 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Aman Gaikwad — SOC Analyst L1</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  @page { size: A4; margin: 12mm; }
-  body { font-family: 'Inter', -apple-system, sans-serif; color: #1c2333; font-size: 10.5pt; line-height: 1.45; background: #fff; padding: 32px 40px; max-width: 820px; margin: 0 auto; }
-  @media print { body { padding: 0; font-size: 10pt; } .no-print { display: none !important; } }
-  header { text-align: center; border-bottom: 2px solid #0a1a35; padding-bottom: 14px; margin-bottom: 18px; }
-  h1 { font-size: 22pt; font-weight: 700; letter-spacing: -0.5px; color: #0a1a35; margin-bottom: 4px; }
-  .role { font-size: 11pt; font-weight: 500; color: #2563eb; letter-spacing: 0.3px; margin-bottom: 10px; }
-  .contact { font-size: 9.5pt; color: #4a5568; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; }
-  .contact a { color: #4a5568; text-decoration: none; }
-  .contact .sep { color: #cbd5e0; }
-  section { margin-bottom: 16px; }
-  h2 { font-size: 11pt; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #0a1a35; border-bottom: 1px solid #d5dae3; padding-bottom: 4px; margin-bottom: 10px; }
-  .summary { font-size: 10.5pt; color: #2d3748; }
-  .skills { display: grid; grid-template-columns: 130px 1fr; gap: 4px 14px; }
-  .skills dt { font-weight: 600; color: #0a1a35; font-size: 10pt; }
-  .skills dd { color: #2d3748; font-size: 10pt; }
-  .item { margin-bottom: 12px; }
-  .item:last-child { margin-bottom: 0; }
-  .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 3px; }
-  .item-title { font-weight: 700; color: #0a1a35; font-size: 10.5pt; }
-  .item-meta { font-size: 9pt; color: #718096; }
-  .item-desc { font-size: 10pt; color: #2d3748; margin-bottom: 3px; }
-  .item-tags { font-size: 9pt; color: #2563eb; font-weight: 500; }
-  .labs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 20px; font-size: 10pt; }
-  .labs-grid li { list-style: none; color: #2d3748; padding-left: 12px; position: relative; }
-  .labs-grid li::before { content: ''; position: absolute; left: 0; top: 7px; width: 4px; height: 4px; border-radius: 50%; background: #2563eb; }
-  .edu-list { display: grid; gap: 6px; }
-  .edu-item { display: flex; justify-content: space-between; gap: 10px; }
-  .edu-title { font-weight: 600; color: #0a1a35; font-size: 10pt; }
-  .edu-sub { color: #4a5568; font-size: 9.5pt; }
-  .edu-meta { color: #718096; font-size: 9pt; white-space: nowrap; }
-  .no-print { position: fixed; top: 20px; right: 20px; background: #0a1a35; color: #fff; border: none; padding: 10px 18px; border-radius: 8px; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 14px rgba(10,26,53,0.25); z-index: 999; }
-  .no-print:hover { background: #142a4d; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aman Gaikwad - SOC Analyst L1</title>
+<meta name="description" content="Portfolio of Aman Gaikwad, SOC Analyst L1 - Blue Team / Threat Detection / Incident Response." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<button class="no-print" onclick="window.print()">🖨 Print / Save as PDF</button>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
 
-<header>
-  <h1>Aman Gaikwad</h1>
-  <div class="role">SOC Analyst — Level 1 | Blue Team · Threat Detection · Incident Response</div>
-  <div class="contact">
-    <a href="mailto:amangaikwad231493@gmail.com">amangaikwad231493@gmail.com</a>
-    <span class="sep">·</span>
-    <a href="https://www.linkedin.com/in/aman-gaikwad-a94353327" target="_blank">linkedin.com/in/aman-gaikwad</a>
-    <span class="sep">·</span>
-    <a href="https://github.com/aman-cyber07" target="_blank">github.com/aman-cyber07</a>
-    <span class="sep">·</span>
-    <span>India</span>
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="#hero" class="brand"><span class="brand-dot"></span>AMAN GAIKWAD</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#labs">Labs</a>
+      <a href="#certifications">Certs</a>
+      <a href="#internships">Internships</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<section>
-  <h2>Summary</h2>
-  <p class="summary">Aspiring SOC Analyst L1 with hands-on training in threat detection, incident response, SIEM monitoring, and log analysis. Skilled in triaging alerts across Windows, Linux, and network logs; identifying common attack patterns (phishing, brute force, password spraying, lateral movement); and correlating multi-source evidence using MITRE ATT&amp;CK, Cyber Kill Chain, and Pyramid of Pain. Passionate about blue team defense and continuous learning.</p>
-</section>
-
-<section>
-  <h2>Technical Skills</h2>
-  <dl class="skills">
-    <dt>Security</dt>
-    <dd>Incident Response · Threat Intelligence · Vulnerability Assessment · Alert Triage · IOC Analysis</dd>
-    <dt>Networking</dt>
-    <dd>TCP/IP · Firewall / IDS / IPS · Packet Analysis · VPN · Proxy Logs</dd>
-    <dt>SIEM / Tools</dt>
-    <dd>Splunk · Splunk SOAR · Microsoft Sentinel · Wazuh · Suricata · Snort · Wireshark · Nessus · Nmap · pfSense · Active Directory · Jira · VirusTotal · AbuseIPDB</dd>
-    <dt>Frameworks</dt>
-    <dd>MITRE ATT&amp;CK · Cyber Kill Chain · Pyramid of Pain</dd>
-    <dt>Programming</dt>
-    <dd>Python · Bash · PowerShell</dd>
-    <dt>Log Sources</dt>
-    <dd>Windows Event Logs (4624, 4625, 4672, 4688) · Linux syslog / auth.log · EDR alerts · Firewall · IDS/IPS · Apache / IIS web logs</dd>
-  </dl>
-</section>
-
-<section>
-  <h2>Security Projects</h2>
-  <div class="item">
-    <div class="item-head"><div class="item-title">MCPGuard — Runtime Security for AI Agents</div><div class="item-meta">github.com/aman-cyber07/mcpguard</div></div>
-    <div class="item-desc">Runtime security analyzer that detects malicious tool chains in AI agents using the Model Context Protocol. Builds a live capability graph of agent behavior and blocks data-exfiltration paths before data leaves the perimeter.</div>
-    <div class="item-tags">AI Security · MCP · Runtime Analysis</div>
-  </div>
-  <div class="item">
-    <div class="item-head"><div class="item-title">AI HoneyPerson — LLM-Powered Deception</div><div class="item-meta">github.com/aman-cyber07/ai-honeyperson</div></div>
-    <div class="item-desc">Defensive deception system that creates LLM-powered fake employees to engage attackers during social engineering attempts. Detects intent, maps behavior to MITRE ATT&amp;CK, and extracts IOCs — harder to detect than traditional honeypots.</div>
-    <div class="item-tags">Deception · LLM · MITRE ATT&amp;CK</div>
-  </div>
-  <div class="item">
-    <div class="item-head"><div class="item-title">PermissionForecast — Predictive IAM Risk</div><div class="item-meta">github.com/aman-cyber07/Permission-forecast</div></div>
-    <div class="item-desc">AI-powered IAM tool that predicts privilege escalation before it happens. Detects dangerous permission chains (e.g., iam:PassRole + lambda:InvokeFunction), assigns risk scores, and recommends minimal-fix counterfactuals.</div>
-    <div class="item-tags">IAM · Cloud Security · Risk Scoring</div>
-  </div>
-  <div class="item">
-    <div class="item-head"><div class="item-title">IntentFirewall — Intent-Based Access Control</div><div class="item-meta">github.com/aman-cyber07/intent-firewall</div></div>
-    <div class="item-desc">Access-control system for AI agents that compares declared objective against observed runtime behavior. Computes a divergence score; pauses agent execution above 70% divergence to prevent insider-style misuse.</div>
-    <div class="item-tags">AI Agents · Access Control · Behavioral Analytics</div>
-  </div>
-  <div class="item">
-    <div class="item-head"><div class="item-title">DataGravity — Predictive DLP</div><div class="item-meta">github.com/aman-cyber07/DataGravity</div></div>
-    <div class="item-desc">Predictive data leak prevention tool that maps users, apps, data, and AI tools into a graph. Predicts exfiltration paths with probability scores, detects PII, and can auto-revoke permissions or alert Slack.</div>
-    <div class="item-tags">DLP · Graph Analysis · PII Detection</div>
+<section class="hero section" id="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="grid-bg"></div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="label" data-reveal>SOC ANALYST - L1</span>
+      <h1 class="hero-title" data-reveal><span id="typedText"></span><span class="cursor-blink">|</span></h1>
+      <p class="hero-sub" data-reveal>Monitoring alerts, hunting threats, and stopping attacks before they strike. Calm under pressure, curious by nature.</p>
+      <div class="hero-buttons" data-reveal>
+        <a href="#projects" class="btn btn-primary magnetic"><span>View Projects</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="assets/resume.pdf" download="Aman_Gaikwad_Resume.pdf" class="btn btn-outline magnetic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><span>Resume</span></a>
+      </div>
+      <div class="status-strip" data-reveal><span class="status-dot"></span><span>SYSTEM STATUS · ONLINE</span></div>
+    </div>
+    <div class="hero-visual" data-reveal>
+      <div class="portrait-card tilt">
+        <div class="portrait-frame">
+          <img src="assets/profile.png" alt="Aman Gaikwad" />
+          <div class="scan-line"></div>
+        </div>
+        <div class="portrait-meta"><span class="pulse-dot"></span><span>AVAILABLE</span></div>
+      </div>
+      <div class="stat-chip chip-1"><span class="chip-dot"></span> Monitoring</div>
+      <div class="stat-chip chip-2"><span class="chip-dot"></span> Threat Intel</div>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Hands-On SOC Labs</h2>
-  <ul class="labs-grid">
-    <li>Windows Brute-Force Detection (Event ID 4625) in Splunk</li>
-    <li>Splunk Universal Forwarder — Linux &amp; Windows log ingestion</li>
-    <li>IIS Web Server setup with SIEM log analysis</li>
-    <li>Full SOC lab build — network, VMs, monitoring stack</li>
-    <li>PHP integration for structured web app logging</li>
-    <li>Windows Server logs → Splunk Enterprise</li>
-    <li>DVWA + Splunk — end-to-end web attack visibility</li>
-    <li>Real-time RDP brute-force alert in Splunk</li>
-    <li>SQLi simulation and Splunk detection queries</li>
-    <li>Wazuh File Integrity Monitoring (FIM)</li>
-    <li>Wazuh SSH brute-force detection on Linux</li>
-    <li>Azure Lighthouse for MSSP &amp; cross-tenant SOC ops</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Education</h2>
-  <div class="edu-list">
-    <div class="edu-item"><div><div class="edu-title">BE in Computer Engineering</div><div class="edu-sub">Savitribai Phule Pune University (SPPU)</div></div><div class="edu-meta">2023 – 2027</div></div>
-    <div class="edu-item"><div><div class="edu-title">12th (Science — PCM)</div><div class="edu-sub">Kendriya Vidyalaya Sangathan</div></div><div class="edu-meta">2023</div></div>
-    <div class="edu-item"><div><div class="edu-title">10th</div><div class="edu-sub">Kendriya Vidyalaya Sangathan</div></div><div class="edu-meta">2021</div></div>
+<section class="stats-bar">
+  <div class="container stats-grid">
+    <div class="stat" data-reveal><div class="stat-number" data-count="13">0</div><div class="stat-label">Security Tools</div></div>
+    <div class="stat" data-reveal><div class="stat-number" data-count="8">0</div><div class="stat-label">Certifications</div></div>
+    <div class="stat" data-reveal><div class="stat-number" data-count="5">0</div><div class="stat-label">Projects Built</div></div>
+    <div class="stat" data-reveal><div class="stat-number" data-count="12">0</div><div class="stat-label">SOC Labs Done</div></div>
   </div>
 </section>
 
-<section>
-  <h2>Certifications</h2>
-  <div class="edu-list">
-    <div class="edu-item"><div class="edu-title">SOC Analyst Program</div><div class="edu-meta">Seven Mentor</div></div>
-    <div class="edu-item"><div class="edu-title">CEH v13 — Certified Ethical Hacker</div><div class="edu-meta">Seven Mentor</div></div>
-    <div class="edu-item"><div class="edu-title">WAPT — Web Application Penetration Testing</div><div class="edu-meta">Seven Mentor</div></div>
-    <div class="edu-item"><div class="edu-title">CCNA — Cisco Certified Network Associate</div><div class="edu-meta">Seven Mentor</div></div>
-    <div class="edu-item"><div class="edu-title">Red Hat Linux Administration</div><div class="edu-meta">Seven Mentor</div></div>
-    <div class="edu-item"><div class="edu-title">Mobile Forensics &amp; Phone Lock Bypass</div><div class="edu-meta">Cyber Octopus Pvt. Ltd. · 2026</div></div>
-    <div class="edu-item"><div class="edu-title">Drone Forensics</div><div class="edu-meta">CyberSisco · 2026</div></div>
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title" data-reveal>ABOUT</h2>
+    <div class="about-grid">
+      <div class="about-portrait" data-reveal><img src="assets/profile.png" alt="Aman Gaikwad" /></div>
+      <div class="about-text" data-reveal>
+        <p>I am an aspiring SOC Analyst L1 with training in threat detection, incident response, SIEM monitoring, and log analysis. I analyze Windows and Linux logs to find suspicious activity and understand what happened during a security event.</p>
+        <p>I perform alert triage - separating real threats from false positives quickly and accurately. I identify common attacks like phishing, brute force, password spraying, and lateral movement. I understand both host logs (Windows Event Logs, Linux syslog, EDR alerts) and network logs (firewall, IDS/IPS, proxy, VPN), and I correlate data from multiple sources to build a clear picture of an incident.</p>
+        <p>I follow frameworks like Cyber Kill Chain, MITRE ATT&amp;CK, and Pyramid of Pain to think like an attacker and defend like an analyst. I document every finding clearly because "If it's not documented, it didn't happen." I escalate confirmed threats to L2/IR teams with proper evidence and context. I am passionate about blue team defense and committed to continuous learning and growth.</p>
+        <div class="about-focus">
+          <span class="focus-label">FOCUS</span>
+          <div class="tags">
+            <span class="tag">Threat Detection</span>
+            <span class="tag">Incident Response</span>
+            <span class="tag">SIEM Monitoring</span>
+            <span class="tag">Log Analysis</span>
+            <span class="tag">MITRE ATT&amp;CK</span>
+            <span class="tag">Blue Team</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Internships</h2>
-  <div class="edu-list">
-    <div class="edu-item"><div><div class="edu-title">Cyber Security Intern</div><div class="edu-sub">UpToSkill — 3 Months</div></div><div class="edu-meta">2026</div></div>
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <h2 class="section-title" data-reveal>SKILLS</h2>
+    <div class="skills-grid">
+      <div class="skill-card" data-reveal><h3>Security</h3><ul><li>Incident Response</li><li>Threat Intelligence</li><li>Vulnerability Assessment</li></ul></div>
+      <div class="skill-card" data-reveal><h3>Networking</h3><ul><li>TCP/IP</li><li>Firewall / IDS / IPS</li><li>Packet Analysis</li></ul></div>
+      <div class="skill-card skill-card-wide" data-reveal>
+        <h3>Tools</h3>
+        <ul class="tools-list">
+          <li>Splunk</li><li>Wireshark</li><li>Sentinel</li><li>Wazuh</li><li>Suricata</li><li>Snort</li>
+          <li>VirusTotal / AbuseIPDB</li><li>Splunk SOAR</li><li>Active Directory</li>
+          <li>pfSense</li><li>Nessus</li><li>Nmap</li><li>Jira</li>
+        </ul>
+      </div>
+      <div class="skill-card" data-reveal><h3>Programming</h3><ul><li>Python</li><li>Bash</li><li>PowerShell</li></ul></div>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Soft Skills</h2>
-  <ul class="labs-grid">
-    <li>Strong communication &amp; documentation</li>
-    <li>Analytical &amp; critical thinking</li>
-    <li>Problem-solving under pressure</li>
-    <li>Attention to detail</li>
-    <li>Quick learner with research mindset</li>
-    <li>Team collaboration &amp; knowledge sharing</li>
-    <li>Time management &amp; task prioritization</li>
-    <li>Adaptability to new tools &amp; technologies</li>
-  </ul>
+<section class="section" id="projects">
+  <div class="container">
+    <h2 class="section-title" data-reveal>PROJECTS</h2>
+    <div class="projects-grid">
+      <article class="project-card" data-reveal>
+        <div class="project-thumb"><span class="thumb-badge">01</span><img src="assets/projects/mcpguard.png" alt="MCPGuard" /></div>
+        <h3>MCPGuard</h3>
+        <p>A runtime security analyzer that detects malicious tool chains in AI agents using the Model Context Protocol (MCP). It builds a live capability graph of agent behavior and blocks data-exfiltration paths.</p>
+        <div class="tags"><span class="tag">AI Security</span><span class="tag">MCP</span><span class="tag">Runtime Analysis</span></div>
+        <a href="https://github.com/aman-cyber07/mcpguard" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-thumb"><span class="thumb-badge">02</span><img src="assets/projects/ai-honeyperson.png" alt="AI HoneyPerson" /></div>
+        <h3>AI HoneyPerson</h3>
+        <p>A defensive deception system that creates LLM-powered fake employees to engage and trap attackers. Detects intent, maps behavior to MITRE ATT&amp;CK, and extracts IOCs.</p>
+        <div class="tags"><span class="tag">Deception</span><span class="tag">LLM</span><span class="tag">MITRE ATT&amp;CK</span></div>
+        <a href="https://github.com/aman-cyber07/ai-honeyperson" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-thumb"><span class="thumb-badge">03</span><img src="assets/projects/permission-forecast.png" alt="PermissionForecast" /></div>
+        <h3>PermissionForecast</h3>
+        <p>An AI-powered IAM tool that predicts privilege escalation before it happens. Detects dangerous permission chains, assigns risk scores, and recommends minimal fixes.</p>
+        <div class="tags"><span class="tag">IAM</span><span class="tag">Cloud Security</span><span class="tag">Risk Scoring</span></div>
+        <a href="https://github.com/aman-cyber07/Permission-forecast" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-thumb"><span class="thumb-badge">04</span><img src="assets/projects/intent-firewall.png" alt="IntentFirewall" /></div>
+        <h3>IntentFirewall</h3>
+        <p>An intent-based access control system for AI agents. Compares declared objective against observed runtime behavior and computes a divergence score. Above 70% divergence, it pauses the agent.</p>
+        <div class="tags"><span class="tag">AI Agents</span><span class="tag">Access Control</span><span class="tag">Behavioral Analytics</span></div>
+        <a href="https://github.com/aman-cyber07/intent-firewall" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
+      </article>
+      <article class="project-card" data-reveal>
+        <div class="project-thumb"><span class="thumb-badge">05</span><img src="assets/projects/datagravity.png" alt="DataGravity" /></div>
+        <h3>DataGravity</h3>
+        <p>A predictive data leak prevention (DLP) tool. Maps users, apps, data, and AI tools into a graph, then predicts exfiltration paths with a probability score.</p>
+        <div class="tags"><span class="tag">DLP</span><span class="tag">Graph Analysis</span><span class="tag">PII Detection</span></div>
+        <a href="https://github.com/aman-cyber07/DataGravity" target="_blank" rel="noopener" class="project-link">View Project &rarr;</a>
+      </article>
+    </div>
+  </div>
 </section>
 
+<section class="section section-alt" id="labs">
+  <div class="container">
+    <h2 class="section-title" data-reveal>SOC LABS</h2>
+    <p class="labs-intro" data-reveal>Hands-on blue team labs - building detections, ingesting logs, and simulating attacks in controlled environments.</p>
+    <div class="labs-timeline">
+      <div class="lab-item" data-reveal><div class="lab-number">15</div><div class="lab-body"><h3>Azure Lighthouse for MSSP &amp; SOC Operations</h3><p>Understanding cross-tenant management for Managed Security Service Providers - how SOC teams monitor multiple customer tenants from a single pane of glass.</p><div class="tags"><span class="tag">Azure</span><span class="tag">Lighthouse</span><span class="tag">MSSP</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">14</div><div class="lab-body"><h3>Simulating &amp; Detecting SSH Brute-Force Attacks with Wazuh SIEM</h3><p>Launched an SSH brute-force attack against a Linux endpoint and built the Wazuh rule to detect repeated authentication failures in real time.</p><div class="tags"><span class="tag">Wazuh</span><span class="tag">SSH</span><span class="tag">Brute Force</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">13</div><div class="lab-body"><h3>Wazuh File Integrity Monitoring (FIM)</h3><p>Configured Wazuh FIM to detect unauthorized file changes on critical system paths.</p><div class="tags"><span class="tag">Wazuh</span><span class="tag">FIM</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">11</div><div class="lab-body"><h3>Simulating SQLi and Catching it in Splunk</h3><p>Performed an SQL injection against a vulnerable web app, then wrote Splunk queries to detect the attack pattern.</p><div class="tags"><span class="tag">Splunk</span><span class="tag">SQLi</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">10</div><div class="lab-body"><h3>Real-Time RDP Brute-Force Detection Alert in Splunk</h3><p>Built a real-time Splunk alert that fires when RDP brute-force activity is detected on Windows endpoints.</p><div class="tags"><span class="tag">Splunk</span><span class="tag">RDP</span><span class="tag">Alerting</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">8</div><div class="lab-body"><h3>DVWA + Splunk Log Ingestion</h3><p>Deployed DVWA as a vulnerable target and piped its Apache logs into Splunk for end-to-end visibility.</p><div class="tags"><span class="tag">DVWA</span><span class="tag">Splunk</span><span class="tag">Apache</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">7</div><div class="lab-body"><h3>Windows Server Log Ingestion to Splunk Enterprise</h3><p>Forwarded Windows Server Event Logs to Splunk Enterprise using Universal Forwarder.</p><div class="tags"><span class="tag">Splunk</span><span class="tag">Windows Server</span><span class="tag">UF</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">6</div><div class="lab-body"><h3>PHP Integration for Web Server Logging</h3><p>Integrated PHP with the web stack to generate structured application logs.</p><div class="tags"><span class="tag">PHP</span><span class="tag">Logging</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">4</div><div class="lab-body"><h3>Cybersecurity Lab Setup</h3><p>Set up the core lab infrastructure - network segments, virtual machines, and monitoring stack.</p><div class="tags"><span class="tag">Lab Setup</span><span class="tag">VMware</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">3</div><div class="lab-body"><h3>Mastering Web Infrastructure with IIS</h3><p>Deployed Microsoft IIS as a web server and captured its logs for SIEM ingestion.</p><div class="tags"><span class="tag">IIS</span><span class="tag">Windows</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">2</div><div class="lab-body"><h3>Splunk Universal Forwarder on Linux + Windows</h3><p>Deployed Splunk UF to stream system and security logs to a centralized Splunk server.</p><div class="tags"><span class="tag">Splunk UF</span><span class="tag">Linux</span><span class="tag">Windows</span></div></div></div>
+      <div class="lab-item" data-reveal><div class="lab-number">1</div><div class="lab-body"><h3>Windows Brute-Force Detection - First SOC Lab</h3><p>Detected brute-force attacks against Windows 10 - analyzing failed logon events (Event ID 4625) in Splunk.</p><div class="tags"><span class="tag">Windows</span><span class="tag">Event ID 4625</span><span class="tag">Splunk</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="certifications">
+  <div class="container">
+    <h2 class="section-title" data-reveal>CERTIFICATIONS</h2>
+    <div class="certs-list">
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">SOC Analyst Program</div><div class="cert-meta">Seven Mentor</div></div>
+        <a href="assets/certs/soc.jpg" download="Aman_Gaikwad_SOC.jpg" class="cert-download" aria-label="Download SOC"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">CEH v13</div><div class="cert-meta">Seven Mentor</div></div>
+        <a href="assets/certs/ceh-v13.jpg" download="Aman_Gaikwad_CEHv13.jpg" class="cert-download" aria-label="Download CEH v13"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">WAPT</div><div class="cert-meta">Seven Mentor</div></div>
+        <a href="assets/certs/wapt.jpg" download="Aman_Gaikwad_WAPT.jpg" class="cert-download" aria-label="Download WAPT"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">CCNA</div><div class="cert-meta">Seven Mentor</div></div>
+        <a href="assets/certs/ccna.jpg" download="Aman_Gaikwad_CCNA.jpg" class="cert-download" aria-label="Download CCNA"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">Red Hat Linux</div><div class="cert-meta">Seven Mentor</div></div>
+        <a href="assets/certs/redhat-linux.jpg" download="Aman_Gaikwad_RedHat_Linux.jpg" class="cert-download" aria-label="Download Red Hat Linux"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">Mobile Forensics &amp; Phone Lock Bypass</div><div class="cert-meta">Cyber Octopus Pvt. Ltd. · 2026</div></div>
+        <a href="assets/certs/mobile-forensics.jpg" download="Aman_Gaikwad_Mobile_Forensics.jpg" class="cert-download" aria-label="Download Mobile Forensics"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <div class="cert-info"><div class="cert-name">Drone Forensics</div><div class="cert-meta">CyberSisco · 2026</div></div>
+        <a href="assets/certs/drone-forensics.jpg" download="Aman_Gaikwad_Drone_Forensics.jpg" class="cert-download" aria-label="Download Drone Forensics"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="internships">
+  <div class="container">
+    <h2 class="section-title" data-reveal>INTERNSHIPS</h2>
+    <div class="certs-list">
+      <div class="cert-item" data-reveal>
+        <div class="cert-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M10 7V5h4v2"/></svg></div>
+        <div class="cert-info"><div class="cert-name">Cyber Security Intern</div><div class="cert-meta">UpToSkill · 3 Months · 2026</div></div>
+        <a href="assets/certs/uptoskill-internship.jpg" download="Aman_Gaikwad_UpToSkill_Internship.jpg" class="cert-download" aria-label="Download Internship Certificate"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="container">
+    <h2 class="section-title" data-reveal>EDUCATION</h2>
+    <div class="certs-list">
+      <div class="cert-item" data-reveal><div class="cert-info"><div class="cert-name">BE in Computer Engineering</div><div class="cert-meta">SPPU · 2023 – 2027</div></div></div>
+      <div class="cert-item" data-reveal><div class="cert-info"><div class="cert-name">12th (Science — PCM)</div><div class="cert-meta">Kendriya Vidyalaya Sangathan · 2023</div></div></div>
+      <div class="cert-item" data-reveal><div class="cert-info"><div class="cert-name">10th</div><div class="cert-meta">Kendriya Vidyalaya Sangathan · 2021</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <h2 class="section-title" data-reveal>LET'S CONNECT</h2>
+    <p class="contact-sub" data-reveal>Open to opportunities in SOC / Blue Team roles.</p>
+    <div class="contact-grid">
+      <div class="contact-info" data-reveal>
+        <a href="mailto:amangaikwad231493@gmail.com" class="contact-link"><span>Email</span><span>amangaikwad231493@gmail.com</span></a>
+        <a href="https://www.linkedin.com/in/aman-gaikwad-a94353327" target="_blank" rel="noopener" class="contact-link"><span>LinkedIn</span><span>/in/aman-gaikwad</span></a>
+        <a href="https://github.com/aman-cyber07" target="_blank" rel="noopener" class="contact-link"><span>GitHub</span><span>/aman-cyber07</span></a>
+      </div>
+      <form class="contact-form" data-reveal onsubmit="event.preventDefault();">
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message" rows="4" required></textarea>
+        <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-brand">
+      <div class="footer-name">AMAN GAIKWAD</div>
+      <div class="footer-role">SOC Analyst L1 / Cybersecurity</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/aman-gaikwad-a94353327" target="_blank" rel="noopener">LinkedIn</a><span>·</span>
+      <a href="https://github.com/aman-cyber07" target="_blank" rel="noopener">GitHub</a><span>·</span>
+      <a href="mailto:amangaikwad231493@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
