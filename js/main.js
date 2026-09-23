@@ -1,4 +1,5 @@
-﻿(function () {
+$js = @'
+(function () {
   'use strict';
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -137,3 +138,7 @@
     });
   }
 })();
+'@
+
+Set-Content -Path "$PWD\js\main.js" -Value $js -Encoding UTF8
+Write-Host "[OK] js/main.js written" -ForegroundColor Green
